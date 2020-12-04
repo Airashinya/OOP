@@ -71,10 +71,14 @@ int main() {
 	cout << "Канады:"; c = inputNumber(); Can ca(c);
 	cout << "США:"; u = inputNumber(); Usa us(u);
 	cout<< endl;
-	
-	ru.print(); ru.proc();
-	ca.print(); ca.proc();
-	us.print(); us.proc();
+	 
+	hok *h[3];
+	h[0] = &ru; h[1] = &ca; h[2] = &us;
+
+	for (int i = 0; i <=3; i++) {
+		h[i]->print(); h[i]->proc(); cout << endl;
+	}
+
 }
 
 
